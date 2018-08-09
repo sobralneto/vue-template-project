@@ -1,7 +1,7 @@
 import http from '../../infrastructure/http'
 
 const UsuarioService = {
-  urlPrefix: 'cliente',
+  urlPrefix: 'usuario',
 
   insert (model) {
     return http.post(`${this.urlPrefix}/cadastro`, model)
