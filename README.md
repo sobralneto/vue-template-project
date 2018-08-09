@@ -1,7 +1,7 @@
 # vue-template-project
 
 > Projeto base para novos projetos<br /><br />
-> Dependencies: Axios, jQuery, Pooper.js, custom Bootstrap 4 and Moment.js
+> <b>Dependencies: </b> Axios, jQuery, Pooper.js, custom Bootstrap 4 and Moment.js
 
 ## Build Setup
 
