@@ -1,6 +1,7 @@
 # vue-template-project
 
 > Projeto base para novos projetos
+Axios, jQuery, Pooper.js, Bootstrap 4 personalizado
 
 ## Build Setup
 
