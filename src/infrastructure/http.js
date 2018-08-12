@@ -6,7 +6,6 @@ const httpService = {
   get (url, params) {
     return axios.get(url, {
       headers: {
-        // Authorization: `Bearer `,
         'Content-Type': 'application/json'
       },
       crossdomain: true,
@@ -17,7 +16,6 @@ const httpService = {
   post (url, params) {
     return axios.post(url, params, {
       headers: {
-        // Authorization: `Bearer `,
         'Content-Type': 'application/json'
       },
       crossdomain: true
@@ -27,7 +25,6 @@ const httpService = {
   put (url, params) {
     return axios.put(url, params, {
       headers: {
-        // Authorization: `Bearer `,
         'Content-Type': 'application/json'
       },
       crossdomain: true
@@ -37,7 +34,6 @@ const httpService = {
   delete (url, params) {
     return axios.delete(url, {
       headers: {
-        // Authorization: `Bearer `,
         'Content-Type': 'application/json'
       },
       crossdomain: true,

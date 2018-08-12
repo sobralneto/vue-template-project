@@ -1,5 +1,5 @@
-import Usuario from '../domain/entity/usuario'
-import UsuarioService from '../domain/services/usuario-service'
+import Usuario from '../../domain/entity/usuario'
+import UsuarioService from '../../domain/services/usuario-service'
 
 class UsuarioController {
   _usuario = new Usuario()
@@ -12,6 +12,20 @@ class UsuarioController {
     this._usuario.senha = modelCadastro.senha
 
     UsuarioService.insert(this._usuario)
+  }
+
+  login (username, senha) {
+    if (process.env.AUTHENTICATION_MODE === 'firebase') {
+      return new Promise(function (resolve, reject) {
+        UsuarioService.loginFirebase(username, senha)
+          .then((response) => {
+            resolve(response)
+          })
+          .catch((error) => {
+            reject(error)
+          })
+      })
+    }
   }
 
   editar (modelEdicao) {
