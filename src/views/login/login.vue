@@ -16,9 +16,6 @@
               <div class="form-group">
                 <input type="password" class="form-control" id="inputPassword" placeholder="Digite sua senha" v-model="password">
               </div>
-              <!--<div class="forgot">
-                <a href="reset.html">Esqueceu sua senha?</a>
-              </div>-->
               <button type="submit" class="btn btn-teal btn-block" :disabled="disabled">Login</button>
               <div v-show="msgAuth" v-bind:class="['mt-4 mb-0 alert', {'alert-success': authStatus, 'alert alert-danger': !authStatus}]">
                 {{ msgAuth }}

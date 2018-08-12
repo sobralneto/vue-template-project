@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
-import firebase from '../firebase'
 import UsuarioController from '../../controller/usuario/usuario-controller'
 
 Vue.use(Vuex)
@@ -45,8 +44,8 @@ export default new Vuex.Store({
             localStorage.setItem(labelToken, userToken)
             localStorage.setItem(labelUser, btoa(JSON.stringify(user)))
             axios.defaults.headers.common['Authorization'] = userToken
-            commit('auth_success', userToken, user)
             resolve('Login realizado com sucesso')
+            commit('auth_success', userToken, user)
           })
           .catch((error) => {
             commit('auth_error')
