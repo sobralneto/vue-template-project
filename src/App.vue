@@ -33,6 +33,10 @@ export default {
         .then(() => {
           this.$router.push('/login')
         })
+        .catch((error) => {
+          console.log(error)
+          return false
+        })
     }
   }
 }

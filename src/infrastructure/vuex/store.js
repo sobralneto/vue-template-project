@@ -57,16 +57,17 @@ export default new Vuex.Store({
       })
     },
     logout ({commit}) {
-      if (process.env.AUTHENTICATION_MODE === 'firebase') {
-        return firebase.auth().signOut().then(() => {
+      let usuario = new UsuarioController()
+      usuario.logout()
+        .then(() => {
           commit('logout')
           localStorage.removeItem(labelToken)
           localStorage.removeItem(labelUser)
           delete axios.defaults.headers.common['Authorization']
         })
-      } else {
-        return false
-      }
+        .catch((error) => {
+          return error
+        })
     }
   },
   getters: {

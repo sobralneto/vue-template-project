@@ -6,7 +6,7 @@
         <div class="login-form">
           <div class="main-div shadow">
             <div class="panel">
-              <h2>{{ nomeSistema }}</h2>
+              <center><img src="../../assets/logo-empresa.png" width="250"></center>
               <p></p>
             </div>
             <form id="Login" @submit.prevent="login">
@@ -25,7 +25,7 @@
               </div>
             </form>
           </div>
-          <p class="text-white"> Designed by Sobral Neto</p>
+          <p class="text-white">Developer by Sobral Neto</p>
         </div>
       </div>
     </div>
@@ -38,9 +38,8 @@ export default {
   name: 'login',
   data () {
     return {
-      nomeSistema: process.env.NOME_SISTEMA,
-      username: '',
-      password: '',
+      username: 'vue_template@gmail.com',
+      password: 'templatevue',
       authStatus: true,
       msgAuth: '',
       disabled: false,

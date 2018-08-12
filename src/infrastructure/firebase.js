@@ -1,12 +1,12 @@
 import firebase from 'firebase'
 
 var config = {
-  apiKey: 'AIzaSyAZwhdf8WwvhGBq9dcpLHlmMXnqde4iHQY',
-  authDomain: 'saldo-positivo.firebaseapp.com',
-  databaseURL: 'https://saldo-positivo.firebaseio.com',
-  projectId: 'saldo-positivo',
-  storageBucket: 'saldo-positivo.appspot.com',
-  messagingSenderId: '6047805400'
+  apiKey: 'AIzaSyBMXch0_3R0C0NMp2K8zNdkKHdGTrFTOUE',
+  authDomain: 'vue-template-project.firebaseapp.com',
+  databaseURL: 'https://vue-template-project.firebaseio.com',
+  projectId: 'vue-template-project',
+  storageBucket: 'vue-template-project.appspot.com',
+  messagingSenderId: '1034392480238'
 }
 
 firebase.initializeApp(config)

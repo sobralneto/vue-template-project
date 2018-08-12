@@ -8,6 +8,16 @@ const UsuarioService = {
     return http.post(`${this.urlPrefix}/cadastro`, model)
   },
 
+  logoutFirebase () {
+    return new Promise((resolve, reject) => {
+      firebase.auth().signOut()
+        .then(() => {
+          resolve('Logout com sucesso')
+        })
+        .catch(error => reject(error))
+    })
+  },
+
   loginFirebase (email, password) {
     return new Promise(function (resolve, reject) {
       firebase.auth().signInWithEmailAndPassword(email, password)
