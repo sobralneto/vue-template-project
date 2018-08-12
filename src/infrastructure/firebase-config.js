@@ -1,6 +1,5 @@
-import firebase from 'firebase'
 
-var config = {
+var firebaseConfig = {
   apiKey: 'AIzaSyBMXch0_3R0C0NMp2K8zNdkKHdGTrFTOUE',
   authDomain: 'vue-template-project.firebaseapp.com',
   databaseURL: 'https://vue-template-project.firebaseio.com',
@@ -9,6 +8,4 @@ var config = {
   messagingSenderId: '1034392480238'
 }
 
-firebase.initializeApp(config)
-
-export default firebase
+export default firebaseConfig

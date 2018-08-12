@@ -29,7 +29,6 @@ const UsuarioService = {
           resolve(dados)
         },
         (err) => {
-          console.log(err)
           let errorMessage = ''
 
           switch (err.code) {

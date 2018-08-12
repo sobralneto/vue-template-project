@@ -7,6 +7,10 @@ import store from './infrastructure/vuex/store'
 import BootstrapVue from 'bootstrap-vue'
 import money from 'v-money'
 import axios from 'axios'
+import firebase from 'firebase'
+import firebaseConfig from './infrastructure/firebase-config'
+
+firebase.initializeApp(firebaseConfig)
 
 Vue.config.productionTip = false
 

@@ -1,28 +1,25 @@
 <template>
   <div v-cloak>
     <div id="LoginForm" :style="height">
-      <br><br><br>
-      <div class="container">
-        <div class="login-form">
-          <div class="main-div shadow">
-            <div class="panel">
-              <center><img src="../../assets/logo-empresa.png" width="250"></center>
-              <p></p>
-            </div>
+      <div class="h-100 row m-0 align-items-center">
+        <div class="col-md-4 col-sm-11 mx-auto bg-white shadow-sm rounded p-5">
+          <div class="col-12">
+            <center><img src="../../assets/logo-empresa.png" width="250"></center>
+          </div>
+          <div class="col-12 mt-4 pt-4">
             <form id="Login" @submit.prevent="login">
-              <div class="form-group">
+              <div class="form-group mb-2">
                 <input type="email" class="form-control" id="inputEmail" placeholder="Digite seu login/email" v-model="username">
               </div>
-              <div class="form-group">
+              <div class="form-group mb-2">
                 <input type="password" class="form-control" id="inputPassword" placeholder="Digite sua senha" v-model="password">
               </div>
-              <button type="submit" class="btn btn-teal btn-block" :disabled="disabled">Login</button>
+              <button type="submit" class="btn btn-teal btn-block p-2" :disabled="disabled">Login</button>
               <div v-show="msgAuth" v-bind:class="['mt-4 mb-0 alert', {'alert-success': authStatus, 'alert alert-danger': !authStatus}]">
                 {{ msgAuth }}
               </div>
             </form>
           </div>
-          <p class="text-white">Developer by Sobral Neto</p>
         </div>
       </div>
     </div>
@@ -80,10 +77,7 @@ export default {
   background-size: cover;
 }
 
-.form-heading { color:#fff; font-size:23px;}
-.panel h2{ color:#444444; font-size:18px; margin:0 0 8px 0;}
-.panel p { color:#777777; font-size:14px; margin-bottom:30px; line-height:24px;}
-.login-form .form-control {
+.form-control {
   background: #f7f7f7 none repeat scroll 0 0;
   border: 1px solid #d4d4d4;
   border-radius: 4px;
@@ -91,33 +85,5 @@ export default {
   height: 50px;
   line-height: 50px;
 }
-.main-div {
-  background: #ffffff none repeat scroll 0 0;
-  border-radius: 2px;
-  margin: 10px auto 30px;
-  max-width: 38%;
-  padding: 50px 70px 70px 71px;
-}
 
-.login-form .form-group {
-  margin-bottom:10px;
-}
-.login-form{ text-align:center;}
-.forgot a {
-  color: #777777;
-  font-size: 14px;
-  text-decoration: underline;
-}
-
-.forgot {
-  text-align: left; margin-bottom:30px;
-}
-.botto-text {
-  color: #ffffff;
-  font-size: 14px;
-  margin: auto;
-}
-
-.back { text-align: left; margin-top:10px;}
-.back a {color: #444444; font-size: 13px;text-decoration: none;}
 </style>
